@@ -47,3 +47,39 @@
    - Generated `outputs/confusion_matrix.png`, `outputs/per_class_metrics.csv`, and `outputs/evaluation_metrics.json`.
 5. **Unit Testing (`tests/test_model_and_dataset.py`):**
    - Executed `pytest -v`: **13 / 13 tests passed** in 19.19s.
+
+---
+
+   ## Day 3 — Real-Time Webcam Recognition & Inference Pipeline
+**Date:** November 5, 2026  
+**Status:** Completed & Verified
+
+### Accomplishments
+1. **Sliding-Window Inference Engine (`src/inference/predictor.py`):**
+   - Implemented `RealTimeSignPredictor` managing a 30-frame rolling landmark deque (`maxlen=30`), a hand-presence tracking deque, and a 6-frame probability smoothing history.
+   - Enforced strict completeness gating (blocking predictions when `len(buffer) < 30`) and hand-presence gating (`WAITING FOR HANDS` when hands are absent in `>60%` of recent frames).
+   - Implemented linearly-weighted moving average probability smoothing across consecutive frames and configurable confidence thresholding (`Uncertain / Unknown` rejection below threshold) with Top-3 candidate extraction.
+2. **Real-Time OpenCV Webcam Application (`app/webcam_app.py`):**
+   - Integrated live webcam capture (`cv2.CAP_DSHOW` with standard fallback), unmirrored MediaPipe Holistic extraction (preserving true Left/Right handedness), and mirrored selfie HUD rendering.
+   - Built interactive Heads-Up Display (HUD) displaying status badge, primary recognized sign, confidence bar with threshold marker, Top-3 candidates leaderboard, shoulder framing indicator, Picture-in-Picture (PiP) reference sign video player, and live FPS counter.
+   - Added hotkeys for resetting buffers (`R`), toggling landmarks (`L`), toggling/cycling reference signs (`P`/`N`/`B`), adjusting confidence threshold (`+`/`-`), and saving screenshots (`S`).
+3. **Unit Testing (`tests/test_inference_and_webcam.py`):**
+   - Added 6 unit tests covering incomplete sequence blocking, hand-presence gating, unknown prediction handling, high-confidence recognition, HUD rendering, and webcam error handling.
+   - Executed `pytest -v`: **19 / 19 tests passed**.
+
+---
+
+## Day 4 — Application Refinement, Documentation & Repository Finalization
+**Date:** November 5, 2026  
+**Status:** Completed & Verified
+
+### Accomplishments
+1. **Live Webcam Handedness Fix & PiP Reference Player (`app/webcam_app.py`):**
+   - Fixed horizontal mirror-flip ordering so MediaPipe Holistic processes the unflipped frame first (preserving true Left/Right hand coordinates matching WLASL training clips) before flipping the display canvas for selfie viewing.
+   - Added a real-time shoulder visibility check (`check_shoulders_in_frame`) and an interactive Picture-in-Picture (PiP) reference sign video player (`ReferenceSignPlayer`) allowing users to cycle through top WLASL signs (`[N]`/`[B]`) while signing.
+2. **Complete Technical & Interview Documentation (`docs/` & `notes/`):**
+   - Created all 6 engineering guides in `docs/` (`PROJECT_ARCHITECTURE.md`, `DATASET_GUIDE.md`, `MODEL_EXPLANATION.md`, `REALTIME_PIPELINE.md`, `TESTING.md`, `DEVELOPMENT_LOG.md`).
+   - Created all 6 learning and interview reference guides in `notes/` (`PROJECT_OVERVIEW.md`, `TECHNOLOGY_NOTES.md`, `COMMAND_REFERENCE.md`, `CODE_EXPLANATION.md`, `LEARNING_NOTES.md`, `NEXT_STEPS.md`).
+3. **End-to-End Verification:**
+   - Executed full test suite (`pytest -v`): **19 / 19 tests passed**.
+   - Captured live demonstration screenshots in `outputs/screenshots/` and finalized root `README.md`.
