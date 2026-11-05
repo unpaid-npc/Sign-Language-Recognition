@@ -1,0 +1,35 @@
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Datasets (Keep README.md, ignore raw videos and processed tensors)
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+*.mp4
+*.avi
+*.mov
+*.npy
+*.npz
+
+# Model Checkpoints (Keep README.md, ignore large weights)
+models/*.pt
+models/*.pth
+models/*.onnx
+
+# Outputs & Logs
+outputs/*.log
+*.tmp
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
