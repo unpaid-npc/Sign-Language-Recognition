@@ -1,0 +1,138 @@
+{
+  "checkpoint_path": "C:\\Projects\\sign-language-recognition\\models\\best_bilstm_wlasl100.pt",
+  "best_epoch": 54,
+  "num_classes": 100,
+  "test_samples": 128,
+  "val_top1_accuracy": 0.4148,
+  "val_top5_accuracy": 0.7273,
+  "test_top1_accuracy": 0.3906,
+  "test_top5_accuracy": 0.6719,
+  "test_macro_precision": 0.3083,
+  "test_macro_recall": 0.3917,
+  "test_macro_f1": 0.3272,
+  "test_weighted_precision": 0.3281,
+  "test_weighted_recall": 0.3906,
+  "test_weighted_f1": 0.3376,
+  "top_15_classes_by_f1": [
+    {
+      "class_id": 86,
+      "gloss": "how",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 2
+    },
+    {
+      "class_id": 22,
+      "gloss": "hot",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 29,
+      "gloss": "thanksgiving",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 33,
+      "gloss": "blue",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 35,
+      "gloss": "can",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 45,
+      "gloss": "man",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 62,
+      "gloss": "enjoy",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 66,
+      "gloss": "meet",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 74,
+      "gloss": "want",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 79,
+      "gloss": "brown",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 81,
+      "gloss": "cheat",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 84,
+      "gloss": "decide",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 85,
+      "gloss": "full",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 89,
+      "gloss": "medicine",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    },
+    {
+      "class_id": 97,
+      "gloss": "son",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1_score": 1.0,
+      "test_support": 1
+    }
+  ]
+}
